@@ -81,16 +81,15 @@ while (seleccion !="no") {
 const total = carrito.reduce((acumulador, el) => acumulador + el.precio * el.cantidad, 0)
 alert (`el total a pagar por su compra es: ${total}$` )
 
-            
-//  extension prettier       
+                  
 
-// let envio= confirm('quiere usar nuestro servicio de envio?');
-// if (envio) {
-//     alert('el envio se le cobrara 500$ adicional' )
-//     function envioo () {
-//        return total + 500;
-//     }
-//     alert ('la tarifa total seria de $'+envioo())
-// } else {'disculpe las molestias'};
+ let envio= confirm('quiere usar nuestro servicio de envio?');
+    if (envio) {
+    alert('el envio se le cobrara 500$ adicional' )
+     function envioo () {
+        return total + 500;
+     }
+     alert ('la tarifa total seria de $'+envioo())
+ } else {'disculpe las molestias'};
 
 
