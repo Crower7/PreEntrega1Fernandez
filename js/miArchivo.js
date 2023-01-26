@@ -1,11 +1,5 @@
 
-let productos = [
-    {nombre:'remera', precio:1600},
-    {nombre:'musculosa', precio:1400},
-    {nombre:'pantalon', precio:2500},
-    {nombre:'short', precio:2100},
-    ];
-let carrito= [];
+
 
 
     alert("Hola soy Sergio, Bienvenido a mi tienda!");
