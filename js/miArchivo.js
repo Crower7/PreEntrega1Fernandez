@@ -13,10 +13,10 @@ while (seleccion != "si" && seleccion != "no") {
 
 if (seleccion == "si") {
     alert("a continuacion voy a mostrarle una lista con nuestros productos")
-    let todosLosProdusctos = productos.map(
+    let todosLosProductos = productos.map(
         (productos) => productos.nombre + " " + productos.precio + "$"
     );
-        alert(todosLosProdusctos.join(" - "))
+        alert(todosLosProductos.join(" - "))
 
 }   else if (seleccion == "no") {
         alert("gracias por venir, hasta pronto!!")
