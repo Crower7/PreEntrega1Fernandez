@@ -1,11 +1,14 @@
-const contenidoDeLaTienda = document.querySelector('#contenidoTienda')
+const contenidoDeLaTienda = document.querySelector('#contenidoTienda');
+const verCarrito = document.querySelector('#verCarrito');
+const ventanaCarritoD =document.querySelector('#ventanaCarritoContenedor');
 
 
 let carrito= [];
 
+
 productos.forEach((ropa) => {
     let content = document.createElement("div"); // crear un div
-        content.className = "div_ropa rotate-diagonal-br";
+        content.className = "div_ropa";     // class a cada div para el css
 
         content.innerHTML = `                        
         <img src="${ropa.img}">
@@ -29,3 +32,19 @@ productos.forEach((ropa) => {
         console.log(carrito); 
     });
 });
+
+verCarrito.addEventListener("click", () => {
+
+    const ventanaCarrito = document.createElement("div");
+        ventanaCarrito.className = "ventanaCarritoCss"
+        ventanaCarrito.innerHTML = `
+        <h1 class = "ventanaCarrito_Titulo">Carrito</h1>
+        `;
+        ventanaCarritoD.append(ventanaCarrito);
+
+        const botonCerrarVentana = document.createElement ("h1");
+            botonCerrarVentana.innerText = "X";
+            botonCerrarVentana.className = "CerrarVentanaBoton";
+
+            ventanaCarrito.append(botonCerrarVentana);
+})
