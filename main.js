@@ -6,14 +6,14 @@ const ventanaCarritoC = document.querySelector('#ventanaCarritoContenedor');
 let carrito= [];
 
 
-productos.forEach((ropa) => {
+productos.forEach((productos) => {
     let content = document.createElement("div"); // crear un div
         content.className = "div_ropa";     // class a cada div para el css
 
         content.innerHTML = `                        
-        <img src="${ropa.img}">
-        <h3>${ropa.nombre}</h3>
-        <p class= "parrafo" >${ropa.precio} $ </p>
+        <img src="${productos.img}">
+        <h3>${productos.nombre}</h3>
+        <p class= "parrafo" >${productos.precio} $ </p>
     `;
 
     contenidoDeLaTienda.append(content);
