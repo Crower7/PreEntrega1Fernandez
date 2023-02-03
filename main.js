@@ -1,6 +1,6 @@
 const contenidoDeLaTienda = document.querySelector('#contenidoTienda');
 const verCarrito = document.querySelector('#verCarrito');
-const ventanaCarritoD =document.querySelector('#ventanaCarritoContenedor');
+const ventanaCarritoC = document.querySelector('#ventanaCarritoContenedor');
 
 
 let carrito= [];
@@ -40,11 +40,24 @@ verCarrito.addEventListener("click", () => {
         ventanaCarrito.innerHTML = `
         <h1 class = "ventanaCarrito_Titulo">Carrito</h1>
         `;
-        ventanaCarritoD.append(ventanaCarrito);
+        ventanaCarritoC.append(ventanaCarrito);
 
         const botonCerrarVentana = document.createElement ("h1");
             botonCerrarVentana.innerText = "X";
-            botonCerrarVentana.className = "CerrarVentanaBoton";
+            botonCerrarVentana.className = "cerrarVentanaBoton";
 
             ventanaCarrito.append(botonCerrarVentana);
-})
+
+            carrito.forEach((productos) =>{
+
+            
+            let carritocontent = document.createElement("div")
+
+            carritocontent.className = "contenido_carrito"
+            carritocontent.innerHTML =  `
+                <h3>${productos.nombre}</h3>
+                <p>${productos.precio} $ </p>
+            `;
+                ventanaCarritoC.append(carritocontent);
+        });
+});
