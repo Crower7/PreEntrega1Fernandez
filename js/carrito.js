@@ -20,19 +20,23 @@ const pintarCarrito = () => {
 
 
 
-            carrito.forEach((productos) =>{
+            carrito.forEach((productos) =>{     //contenido del carrito
 
-            let carritocontent = document.createElement("div")
-            carritocontent.className = "contenido_carrito"
-            carritocontent.innerHTML =  `
+            let carritoContent = document.createElement("div")
+            carritoContent.className = "contenido_carrito"      
+            carritoContent.innerHTML =  `
                 <h3>${productos.nombre}</h3>
                 <p>${productos.precio} $ </p>
+                <p> carrito: ${productos.cantidad}
             `;
-                ventanaCarritoC.append(carritocontent);
+                ventanaCarritoC.append(carritoContent);
 
-                let eliminar = document.createElement("span");
-                eliminar.innerText("❌")
+                let eliminar = document.createElement("span");      //boton para eliminar el producto
+                eliminar.innerText=("❌")
                 eliminar.className="delete-product"
+                carritoContent.append(eliminar);
+
+                eliminar.addEventListener("click",eliminarProducto);    //al hacer click se ejeuta la F (eliminarProducto)
         });
 
         const totalCarrito = carrito.reduce((acu,el) => acu + el.precio, 0)     //acu-acumulador , el-cada producto
@@ -44,3 +48,13 @@ const pintarCarrito = () => {
     };
 
     verCarrito.addEventListener("click",pintarCarrito);
+
+        //eliminar productos del carrito
+    const eliminarProducto = () =>{
+        const founId = carrito.find((element) => element.id);
+
+        carrito = carrito.filter((carritoId) =>{
+            return carritoId !== founId;
+        });
+        pintarCarrito();
+    };

@@ -197,3 +197,9 @@ display: none;
     text-align: center;
     padding-top: 20px;
 }
+
+/* boton delete carrito*/
+
+.delete-product{
+    cursor: pointer;
+}

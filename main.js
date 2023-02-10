@@ -14,6 +14,7 @@ productos.forEach((productos) => {
         <img src="${productos.img}">
         <h3>${productos.nombre}</h3>
         <p class= "parrafo" >${productos.precio} $ </p>
+        
     `;
 
     contenidoDeLaTienda.append(content);
@@ -25,10 +26,22 @@ productos.forEach((productos) => {
             content.append(comprar);
 
     comprar.addEventListener("click", () => {
+        const noRepeat = carrito.some((productoRepetido) => productoRepetido.id === productos.id);
+            if (noRepeat === true) {
+                carrito.map((prod)=>{
+                    if(prod.id === productos.id) {
+                        prod.cantidad++;
+                    }
+                });
+            } else {
+
         carrito.push({
             nombre: productos.nombre,
             precio: productos.precio,
+            id: productos.id,
+            cantidad: productos.cantidad,
         });
+    }
         console.log(carrito); 
     });
 });
