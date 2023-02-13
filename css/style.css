@@ -1,205 +1,232 @@
 .barra_Navegacion {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
 }
-
 
 .titulo {
-	-webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 
-            font-size: 35px;
-            text-align: center;
-            margin-top: 10px;
-            margin-bottom: 15px;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
-
- @-webkit-keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
   }
-  @keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
   }
-  
-  
-
-
-
-.contenido_Tienda{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    margin-left: 80px;
-    margin-right: 80px;
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 
-.div_ropa{
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    
+.contenido_Tienda {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.div_ropa {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
 }
 
 .div_ropa > img {
-    width: 90%;
-    height: 300px;
-    margin-top: 20px;
-    border: 2px solid black;
-
+  width: 90%;
+  height: 300px;
+  margin-top: 20px;
+  border: 2px solid black;
 }
 
-
-
-.div_ropa button{
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color:white;
-    background-color: black;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 15px;
-
+.div_ropa button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
 }
 
 .div_ropa button:hover {
-    opacity: 0,7;
-    
+  opacity: 0, 7;
 }
 
 .parrafo {
-    color: black;
-    font-size: 22px;
+  color: black;
+  font-size: 22px;
 }
 
 section {
-    display: flex;
-    width: 600px;
-    height: 430px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid black;
+  display: flex;
+  width: 600px;
+  height: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
 }
 
 section img {
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5 ease;
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5 ease;
 }
 
 section img:hover {
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
 }
 
-
-              
-.shakeFix:hover{
-    animation-name: shakefix;
-        -webkit-animation-name: shakefix;
-        -moz-animation-name: shakefix;
-    animation-duration: 1s;
-        -webkit-animation-duration: 1s;
-        -moz-animation-duration: 1s;
-    animation-iteration-count: infinite;
-        -webkit-animation-iteration-count: infinite;
-        -moz-animation-iteration-count: infinite;
+.shakeFix:hover {
+  animation-name: shakefix;
+  -webkit-animation-name: shakefix;
+  -moz-animation-name: shakefix;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
 }
 
-    @keyframes shakefix {
-        0%  {transform: translate(1px, 1px);}
-        10% {transform: translate(-1px, -2px);}
-        20% {transform: translate(-3px, 0px);}
-        30% {transform: translate(3px, 2px);}
-        40% {transform: translate(1px, -1px);}
-        50% {transform: translate(-1px, 2px);}
-        60% {transform: translate(-3px, 1px);}
-        70% {transform: translate(3px, 1px);}
-        80% {transform: translate(-1px, -1px);}
-        90% {transform: translate(1px, 2px);}
-        100% {transform: translate(1px, -2px);}
-    }
-              
+@keyframes shakefix {
+  0% {
+    transform: translate(1px, 1px);
+  }
+  10% {
+    transform: translate(-1px, -2px);
+  }
+  20% {
+    transform: translate(-3px, 0px);
+  }
+  30% {
+    transform: translate(3px, 2px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  50% {
+    transform: translate(-1px, 2px);
+  }
+  60% {
+    transform: translate(-3px, 1px);
+  }
+  70% {
+    transform: translate(3px, 1px);
+  }
+  80% {
+    transform: translate(-1px, -1px);
+  }
+  90% {
+    transform: translate(1px, 2px);
+  }
+  100% {
+    transform: translate(1px, -2px);
+  }
+}
+
 .ventanaCarrito_contenedor {
-    width: 80%;
-    margin: 0 10%;
-    max-height: 88vh;
-    color: #fff;
-    background-color: #121212;
-    display: flex;
-    flex-direction : column;
-    align-items: center;
-     /*for the top*/
-    position: fixed;
-    overflow: auto;
-    z-index: 9;
-    top: 12vh;
-    scrollbar-color : none;
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  color: #fff;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*for the top*/
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none;
 }
 
 .ventanaCarrito_contenedor::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 
 .ventanaCarritoCss {
- display: flex;
- justify-content: space-around;
- background-color: #0a0909;
- color: #fff;
- width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #0a0909;
+  color: #fff;
+  width: 100%;
 }
 
 .vetanaCarrito_Titulo {
-    justify-self: start;
+  justify-self: start;
 }
 
 .cerrarVentanaBoton {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .ventanaCarrito_contenedor > .contenido_carrito {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 70%;
-    margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px;
 }
 
 .total-content {
-    font-size: 25px;
-    padding: 20px;
-    text-align: center;
-    padding-top: 20px;
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px;
 }
 
 /* boton delete carrito*/
 
-.delete-product{
-    cursor: pointer;
+.delete-product {
+  cursor: pointer;
+}
+
+    /*cantidad del carrito */
+.cantidad-carrito {
+ background-color : red;
+ color:white;
+ border-radius : 50%;
+ font-size: 12px;
+ padding: 4px;
+ top: 37px;
+ right: 14px;
+ position: absolute;
+ display: none;
+}
+
+.ver-carrito{
+    margin-right: 10px;
 }
